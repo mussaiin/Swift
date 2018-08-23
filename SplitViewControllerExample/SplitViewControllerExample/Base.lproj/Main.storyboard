@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Ly-dM-1Gy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="Rtu-Cq-620">
+            <objects>
+                <splitViewController id="7Ly-dM-1Gy" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="3V8-wj-Yaf" kind="relationship" relationship="masterViewController" id="OpG-gZ-QaN"/>
+                        <segue destination="tLM-c9-pxL" kind="relationship" relationship="detailViewController" id="RAR-TB-YBg"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HB-kl-Rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2337" y="0.0"/>
+        </scene>
+        <!--Shapes-->
+        <scene sceneID="qG3-lX-cmA">
+            <objects>
+                <viewController id="44V-GE-Nc2" customClass="ShapesViewController" customModule="SplitViewControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJH-pu-rec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x66-wf-imS">
+                                <rect key="frame" x="114" y="223" width="146" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-tu-gSu">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Circle"/>
+                                        <connections>
+                                            <segue destination="tLM-c9-pxL" kind="showDetail" identifier="circle" id="CtJ-bW-Do6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLm-eF-Gf9">
+                                        <rect key="frame" x="0.0" y="46" width="107" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Filled Circle"/>
+                                        <connections>
+                                            <segue destination="tLM-c9-pxL" kind="showDetail" identifier="filledCircle" id="y31-MK-ox1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNK-wI-WI1">
+                                        <rect key="frame" x="0.0" y="92" width="93" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Rectangle"/>
+                                        <connections>
+                                            <segue destination="tLM-c9-pxL" kind="showDetail" identifier="rect" id="wGl-Aq-UB1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdS-Pv-bKY">
+                                        <rect key="frame" x="0.0" y="138" width="146" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Filled Rectangle"/>
+                                        <connections>
+                                            <segue destination="tLM-c9-pxL" kind="showDetail" identifier="filledRect" id="ihT-du-iBk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kv-3a-gZf">
+                                        <rect key="frame" x="0.0" y="184" width="146" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Rec Filled Circle"/>
+                                        <connections>
+                                            <segue destination="tLM-c9-pxL" kind="showDetail" identifier="redFilledCircle" id="b8G-X0-JRx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x66-wf-imS" firstAttribute="centerX" secondItem="VJH-pu-rec" secondAttribute="centerX" id="52s-Jm-fy0"/>
+                            <constraint firstItem="x66-wf-imS" firstAttribute="centerY" secondItem="VJH-pu-rec" secondAttribute="centerY" id="oop-lI-9DL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jOB-Qd-4q5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shapes" id="0tz-Pt-F4o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLB-lW-cNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-870"/>
+        </scene>
+        <!--Current Shape-->
+        <scene sceneID="gDZ-zR-X63">
+            <objects>
+                <viewController id="HRn-Ia-Chv" customClass="DrawingAreaViewController" customModule="SplitViewControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hd0-Fm-fQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kct-Gm-y6B" customClass="CustomView" customModule="SplitViewControllerExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="0.99119578159999999" blue="0.94707274279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kct-Gm-y6B" firstAttribute="bottom" secondItem="m7N-YV-xcc" secondAttribute="bottom" id="W0X-I3-j2C"/>
+                            <constraint firstItem="kct-Gm-y6B" firstAttribute="trailing" secondItem="m7N-YV-xcc" secondAttribute="trailing" id="XKK-2B-Rut"/>
+                            <constraint firstItem="kct-Gm-y6B" firstAttribute="leading" secondItem="m7N-YV-xcc" secondAttribute="leading" id="ouc-qN-6zg"/>
+                            <constraint firstItem="kct-Gm-y6B" firstAttribute="top" secondItem="Hd0-Fm-fQg" secondAttribute="top" id="q8Z-Dk-DE1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m7N-YV-xcc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Current Shape" id="36H-ne-lHM"/>
+                    <connections>
+                        <outlet property="customView" destination="kct-Gm-y6B" id="GiZ-2R-wp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9x-hH-nI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XrE-L2-jQ7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3V8-wj-Yaf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UOe-EW-Lvg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="44V-GE-Nc2" kind="relationship" relationship="rootViewController" id="gir-Zw-uMp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIh-4C-3KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1419.2" y="-869.86506746626696"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DWC-iG-hN3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLM-c9-pxL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z9S-JM-LR8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HRn-Ia-Chv" kind="relationship" relationship="rootViewController" id="dyC-kT-qCo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6I-iL-2Bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="0.0"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y31-MK-ox1"/>
+    </inferredMetricsTieBreakers>
+</document>
